@@ -1,0 +1,22 @@
+{
+  "name": "habit-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardoiarced/habit-tracker.git"
+  },
+  "author": "Ricardo Arce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardoiarced/habit-tracker/issues"
+  },
+  "homepage": "https://github.com/ricardoiarced/habit-tracker#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
