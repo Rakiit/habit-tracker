@@ -19,6 +19,13 @@ startStopBtn.addEventListener('click', ()  => {
         paused = true;
         elapsedTime = Date.now() - startTime;
         clearInterval(intervalId);
+        startTime = 0;
+        elapsedTime = 0;
+        currentTime = 0;
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        timeDisplay.textContent = '00:00:00';
     }
 });
 
