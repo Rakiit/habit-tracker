@@ -107,28 +107,28 @@ h1 {
   flex-direction: row;
 }
 
-.top-left-section {
+/* .top-left-section {
   width: 100%;
   height: 3.2rem;
   margin-left: 1.5rem;
-}
+} */
 
-.top-right-section {
+/* .top-right-section {
   width: 20%;
   height: 2.6rem;
   margin-right: 1.5rem;
   display: grid;
   grid-template-columns: 7fr 1fr;
   grid-gap: 1rem;
-}
+} */
 
-.timer {
+/* .timer {
   font-size: larger;
   justify-self: end;
   color: var(--argent-color);
-}
+} */
 
-.play-pause-button {
+/* .play-pause-button {
   height: 2.6rem;
   width: 2.6rem;
   border: none;
@@ -136,17 +136,17 @@ h1 {
   border-radius: 100%;
   cursor: pointer;
   text-decoration: none;
-}
+} */
 
-.play-pause-button svg {
+/* .play-pause-button svg {
   height: 2.6rem;
   width: 2.6rem;
   border-radius: 100%;
-}
+} */
 
-.play-pause-button svg path:hover {
+/* .play-pause-button svg path:hover {
   stroke: var(--purple-color);
-}
+} */
 
 .bottom-container-flex {
   margin: 0 1.5rem 1.5rem 21.5rem;
