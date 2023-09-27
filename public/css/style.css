@@ -79,11 +79,13 @@ body {
   width: 1.6rem;
 }
 
-.sidebar ul li:hover {
+.sidebar ul li:hover,
+.sidebar ul .active {
   background-color: #594f8d;
 }
 
-.sidebar ul li:hover a {
+.sidebar ul li:hover a,
+.sidebar ul li .active {
   color: #fff;
 }
 

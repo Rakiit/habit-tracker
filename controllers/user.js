@@ -1,24 +1,24 @@
 exports.getIndex = (req, res, next) => {
-  res.redirect("user/timer");
+  res.redirect("/timer");
 };
 
 exports.getAddActivity = (req, res, next) => {
   res.render("user/timer", {
     pageTitle: "Start tracking",
-    path: "user/timer",
+    path: "/timer",
   });
 };
 
 exports.getAddReport = (req, res, next) => {
   res.render("user/reports", {
     pageTitle: "Your report",
-    path: "user/reports",
+    path: "/reports",
   });
 };
 
 exports.getAddProject = (req, res, next) => {
   res.render("user/projects", {
     pageTitle: "Your projects",
-    path: "user/projects",
+    path: "/projects",
   });
 };

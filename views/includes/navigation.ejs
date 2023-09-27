@@ -3,24 +3,24 @@
     <h2>Sidebar</h2>
     <ul>
       <h6>TRACK</h6>
-      <li>
-        <a href="/timer"
+      <li class="<%= path === '/timer' ? 'active' : '' %>">
+        <a class="<%= path === '/timer' ? 'active' : '' %>" href="/timer"
           ><img src="/img/clock-solid-icon.svg" alt="Clock icon" /><span
             >Timer</span
           ></a
         >
       </li>
       <h6>ANALYZE</h6>
-      <li>
-        <a href="/reports"
+      <li class="<%= path === '/reports' ? 'active' : '' %>">
+        <a class="<%= path === '/reports' ? 'active' : '' %>" href="/reports"
           ><img src="/img/report-icon.svg" alt="Report icon" /><span
             >Reports</span
           ></a
         >
       </li>
       <h6>MANAGE</h6>
-      <li>
-        <a href="/projects">
+      <li class="<%= path === '/projects' ? 'active' : '' %>">
+        <a class="<%= path === '/projects' ? 'active' : '' %>" href="/projects">
           <img src="/img/folder-solid-icon.svg" alt="Folder icon" /><span
             >Projects</span
           ></a

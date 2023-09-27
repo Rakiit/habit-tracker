@@ -1,21 +1,50 @@
 .top-left-section {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 3.2rem;
   margin-left: 1.5rem;
 }
 
-.top-right-section {
-  width: 20%;
-  height: 2.6rem;
-  margin-right: 1.5rem;
-  display: grid;
-  grid-template-columns: 7fr 1fr;
-  grid-gap: 1rem;
+.activity-input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: large;
+  font-weight: 600;
 }
 
+.top-right-section {
+  height: 2.6rem;
+  /* margin-right: 1.5rem; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 1rem;
+  width: min(55%, 50rem);
+  margin-inline: auto;
+}
+
+.top-right-section .project-list-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.top-right-section .open-modal-projects {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.top-right-section .project-list-icon:hover,
+.top-right-section .open-modal-projects:hover {
+  color: var(--purple-color);
+}
 .timer {
   font-size: larger;
-  justify-self: end;
   color: var(--argent-color);
 }
 
@@ -24,7 +53,6 @@
   width: 2.6rem;
   border: none;
   background: none;
-  border-radius: 100%;
   cursor: pointer;
   text-decoration: none;
 }
@@ -32,9 +60,26 @@
 .play-pause-button svg {
   height: 2.6rem;
   width: 2.6rem;
-  border-radius: 100%;
 }
 
-.play-pause-button svg path:hover {
+.play-pause-button:hover .play-pause-icon,
+.play-pause-button .play-pause-icon:hover {
   stroke: var(--purple-color);
+}
+
+.anchor-login {
+  width: 2.6rem;
+  height: 2.6rem;
+  color: black;
+}
+
+.anchor-login .login-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  color: black;
+}
+
+.anchor-login:hover,
+.anchor-login .login-icon:hover {
+  color: var(--purple-color);
 }
