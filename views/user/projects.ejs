@@ -11,12 +11,19 @@
             <h2>Projects</h2>
           </div>
           <div class="top-right-container">
-            <button class="btn new-project">
+            <button id="openModalBtn" class="btn new-project">
               <svg class="new-project-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
               </svg>
               <span>New project</span>
             </button>
+            <span class="overlay"></span>
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Contenido de tu modal aquí.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -24,4 +31,5 @@
         <div class="bottom-container"></div>
       </div>
   </div>
+  <script src="/js/projects.js"></script>
 <%- include('../includes/end.ejs') %>

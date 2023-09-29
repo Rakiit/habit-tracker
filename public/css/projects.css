@@ -1,3 +1,11 @@
+:root {
+  --blue-color: rgb(11, 131, 217);
+  --pink-color: rgb(158, 91, 217);
+  --Noxious-color: rgb(147, 162, 2);
+  --Emerald-forest: rgb(30, 65, 75);
+  --Cedar-chest: rgb(201, 92, 68);
+}
+
 .top-left-container {
   display: flex;
   align-items: center;
@@ -14,4 +22,39 @@
   width: 2rem;
   height: 2rem;
   margin-right: 0.5rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Contenido del modal */
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+}
+
+/* Estilo del botón de cierre */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
