@@ -1,0 +1,17 @@
+.top-left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1.5rem;
+  height: 3.2rem;
+}
+
+.top-right-container {
+  margin-right: 1.5rem;
+}
+
+.new-project-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}

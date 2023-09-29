@@ -106,6 +106,7 @@ h1 {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row;
 }
 
@@ -161,4 +162,25 @@ h1 {
 
 .bottom-container {
   height: 100%;
+}
+
+.btn {
+  font-family: inherit;
+  border: none;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+  line-height: normal;
+  height: 3.6rem;
+  padding: 0rem 1.6rem 0rem 1.2rem;
+  border-radius: 0.8rem;
+  color: var(--white-color);
+  background-color: var(--purple-color);
 }

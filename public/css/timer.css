@@ -16,7 +16,6 @@
 
 .top-right-section {
   height: 2.6rem;
-  /* margin-right: 1.5rem; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
