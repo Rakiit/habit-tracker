@@ -2,6 +2,7 @@
   --purple-color: #857beb;
   --white-color: white;
   --argent-color: #898989;
+  --sidebar-color: rgb(61, 56, 107);
 }
 
 * {
@@ -38,7 +39,7 @@ body {
   position: fixed;
   width: 20rem;
   height: 100%;
-  background-color: #4b4276;
+  background-color: var(--sidebar-color);
   padding: 3rem 0;
 }
 

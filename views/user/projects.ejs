@@ -17,11 +17,31 @@
               </svg>
               <span>New project</span>
             </button>
-            <span class="overlay"></span>
-            <div id="myModal" class="modal">
+            <div id="myModal" class="new-project-modal">
               <div class="modal-content">
+                <span class="create-new-project-title">Create new project</span>
                 <span class="close">&times;</span>
-                <p>Contenido de tu modal aquí.</p>
+                <form class="create-new-project-form">
+                  <div class="color-input-container">
+                    <div class="modal">
+                      <div class="circle" id="colorCircle"></div>
+                      <div class="colorPicker" id="colorPicker">
+                        <div class="color" style="background-color: red;" onclick="changeColor('red')"></div>
+                        <div class="color" style="background-color: blue;" onclick="changeColor('blue')"></div>
+                        <div class="color" style="background-color: green;" onclick="changeColor('green')"></div>
+                        <div class="color" style="background-color: rgb(11, 131, 217);" onclick="changeColor('rgb(11, 131, 217)')"></div>
+                        <div class="color" style="background-color: rgb(147, 162, 2);" onclick="changeColor('rgb(147, 162, 2)')"></div>
+                      </div>
+                    </div>
+                    <div class="project-input-container">
+                      <input type="text" id="projectName" oninput="validateInput()" onblur="showErrorMessage()" name="name" placeholder="Project name" class="create-new-project-input"/>
+                      <span id="errorMessage" class="input-message-hidden">Please enter a Project name</span>
+                    </div>
+                  </div>
+                  <div class="create-project-btn-container">
+                    <button type="submit" class="btn create-project-btn">Create project</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
