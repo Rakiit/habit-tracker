@@ -21,10 +21,10 @@
               <div class="modal-content">
                 <span class="create-new-project-title">Create new project</span>
                 <span class="close">&times;</span>
-                <form class="create-new-project-form">
+                <form class="create-new-project-form" method="post" action="/projects">
                   <div class="color-input-container">
                     <div class="modal">
-                      <div class="circle" id="colorCircle"></div>
+                      <div class="circle" id="colorCircle" name="color"></div>
                       <div class="colorPicker" id="colorPicker">
                         <div class="color" style="background-color: red;" onclick="changeColor('red')"></div>
                         <div class="color" style="background-color: blue;" onclick="changeColor('blue')"></div>
@@ -48,7 +48,59 @@
         </div>
       </div>
       <div class="bottom-container-flex">
-        <div class="bottom-container"></div>
+        <div class="bottom-container">
+          <table>
+            <thead>
+              <tr>
+                <th class="first-th"></th>
+                <th class="second-th">
+                  <div class="title-arrows-container">
+                    <span>Project</span>
+                    <div class="arrows-container">
+                      <svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                      </svg>
+                      <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                      </svg>                      
+                    </div>
+                </div>
+              </th>
+              <th class="third-th">
+                <div class="title-arrows-container">
+                  <span>Client</span>
+                  <div class="arrows-container">
+                    <svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                    </svg>
+                    <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                    </svg>                      
+                  </div>
+              </div>
+              <th class="fourth-th"></th>
+            </th>
+            <th class="fifth-th">
+              <div class="title-arrows-container">
+                <span>Time</span>
+                <div class="arrows-container">
+                  <svg class="up-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+                  </svg>
+                  <svg class="down-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>                      
+                </div>
+            </div>
+          </th>
+          <th class="sixth-th">
+              <span>User</span>
+        </th>
+        <th class="seventh-th"></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
       </div>
   </div>
   <script src="/js/projects.js"></script>
