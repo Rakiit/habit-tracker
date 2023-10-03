@@ -18,26 +18,30 @@ exports.getAddReport = (req, res, next) => {
   });
 };
 
-exports.getAddProject = (req, res, next) => {
-  res.render("user/projects", {
-    pageTitle: "Your projects",
-    path: "/projects",
+// exports.getAddProject = (req, res, next) => {
+//   res.render("user/projects", {
+//     pageTitle: "Your projects",
+//     proj: projects,
+//     path: "/projects",
+//     formsCSS: true,
+//     projectCSS: true,
+//     activeAddProject: true,
+//   });
+// };
+exports.getProjects = (req, res, next) => {
+  Project.fetchAll((projects) => {
+    res.render("user/projects", {
+      projs: projects,
+      pageTitle: "Your projects",
+      path: "/projects",
+    });
   });
 };
 
 exports.postAddProject = (req, res, next) => {
   const name = req.body.name;
   const color = req.body.color;
-  const project = new Project(name, color, time, person, activity);
+  const project = new Project(name, color);
   project.save();
   res.redirect("/projects");
-};
-
-exports.getProjects = (req, res, next) => {
-  Project.fetchAll((projects) => {
-    res.render("user/projects", {
-      projects,
-      path: "/projects",
-    });
-  });
 };

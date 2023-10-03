@@ -9,6 +9,10 @@ router.get("/", userController.getIndex);
 
 router.get("/reports", userController.getAddReport);
 
-router.get("/projects", userController.getAddProject);
+// router.get("/projects", userController.getAddProject);
+
+router.get("/projects", userController.getProjects);
+
+router.post("/projects", userController.postAddProject);
 
 module.exports = router;

@@ -9,6 +9,7 @@ const p = path.join(
 
 const getProjectsFromFile = (cb) => {
   fs.readFile(p, (err, fileContent) => {
+    console.log(err);
     if (err) {
       cb([]);
     } else {
@@ -18,12 +19,9 @@ const getProjectsFromFile = (cb) => {
 };
 
 module.exports = class Project {
-  constructor(name, color, time, person, activity) {
+  constructor(name, color) {
     this.name = name;
     this.color = color;
-    this.time = time;
-    this.person = person;
-    this.activity = activity;
   }
 
   save() {

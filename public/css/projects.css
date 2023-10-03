@@ -181,6 +181,7 @@ table {
   border-top: none;
   border-collapse: initial;
   table-layout: fixed;
+  width: 100%;
 }
 
 table th {
@@ -189,12 +190,14 @@ table th {
 
 th {
   font-size: 11px;
+  width: 25%;
+  border: 1px solid black;
 }
 
-.first-th {
+/* .first-th {
   height: 5rem;
   width: 3rem;
-  /* font-size: 11px; */
+
   font-weight: 600;
   cursor: default;
   vertical-align: middle;
@@ -202,11 +205,11 @@ th {
   text-transform: uppercase;
   box-shadow: inset 0 -1px 0 0 var(--Color-box-shadow-th);
   padding: 0rem 1rem 0rem 2rem;
-}
+} */
 
 .second-th {
   height: 5rem;
-  width: 28.05rem;
+  /* width: 28.05rem; */
   /* font-size: 11px; */
   font-weight: 600;
   cursor: default;
@@ -219,7 +222,7 @@ th {
 
 .third-th {
   height: 5rem;
-  width: 28.05rem;
+  /* width: 28.05rem; */
   /* font-size: 11px; */
   font-weight: 600;
   cursor: default;
@@ -230,10 +233,9 @@ th {
   box-shadow: inset 0 -1px 0 0 var(--Color-box-shadow-th);
 }
 
-.fourth-th {
+/* .fourth-th {
   height: 5rem;
   width: 3rem;
-  /* font-size: 11px; */
   font-weight: 600;
   cursor: default;
   padding: 0rem 1rem;
@@ -241,11 +243,11 @@ th {
   color: var(--Color-th);
   text-transform: uppercase;
   box-shadow: inset 0 -1px 0 0 var(--Color-box-shadow-th);
-}
+} */
 
 .fifth-th {
   height: 5rem;
-  width: 28.05rem;
+  /* width: 28.05rem; */
   /* font-size: 11px; */
   font-weight: 600;
   cursor: default;
@@ -258,7 +260,7 @@ th {
 
 .sixth-th {
   height: 5rem;
-  width: 28.05rem;
+  /* width: 28.05rem; */
   /* font-size: 11px; */
   font-weight: 600;
   cursor: default;
@@ -269,10 +271,9 @@ th {
   box-shadow: inset 0 -1px 0 0 var(--Color-box-shadow-th);
 }
 
-.seventh-th {
+/* .seventh-th {
   height: 5rem;
   width: 3rem;
-  /* font-size: 11px; */
   font-weight: 600;
   cursor: default;
   padding: 0rem 2rem 0rem 1rem;
@@ -280,7 +281,7 @@ th {
   color: var(--Color-th);
   text-transform: uppercase;
   box-shadow: inset 0 -1px 0 0 var(--Color-box-shadow-th);
-}
+} */
 
 .title-arrows-container {
   height: 3rem;
@@ -308,4 +309,10 @@ th {
 
 .down-arrow {
   width: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
 }

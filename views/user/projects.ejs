@@ -24,13 +24,13 @@
                 <form class="create-new-project-form" method="post" action="/projects">
                   <div class="color-input-container">
                     <div class="modal">
-                      <div class="circle" id="colorCircle" name="color"></div>
+                      <div class="circle" id="colorCircle" value></div>
                       <div class="colorPicker" id="colorPicker">
-                        <div class="color" style="background-color: red;" onclick="changeColor('red')"></div>
-                        <div class="color" style="background-color: blue;" onclick="changeColor('blue')"></div>
-                        <div class="color" style="background-color: green;" onclick="changeColor('green')"></div>
-                        <div class="color" style="background-color: rgb(11, 131, 217);" onclick="changeColor('rgb(11, 131, 217)')"></div>
-                        <div class="color" style="background-color: rgb(147, 162, 2);" onclick="changeColor('rgb(147, 162, 2)')"></div>
+                        <div class="color" style="background-color: red;" onclick="changeColor('red')" data-color="red"></div>
+                        <div class="color" style="background-color: blue;" onclick="changeColor('blue')" data-color="blue"></div>
+                        <div class="color" style="background-color: green;" onclick="changeColor('green')" data-color="green"></div>
+                        <div class="color" style="background-color: rgb(11, 131, 217);" onclick="changeColor('rgb(11, 131, 217)')" data-color="rgb(11, 131, 217)"></div>
+                        <div class="color" style="background-color: rgb(147, 162, 2);" onclick="changeColor('rgb(147, 162, 2)')" data-color="rgb(147, 162, 2)"></div>
                       </div>
                     </div>
                     <div class="project-input-container">
@@ -49,10 +49,10 @@
       </div>
       <div class="bottom-container-flex">
         <div class="bottom-container">
+          <% if (projs.length > 0) { %>
           <table>
             <thead>
               <tr>
-                <th class="first-th"></th>
                 <th class="second-th">
                   <div class="title-arrows-container">
                     <span>Project</span>
@@ -78,7 +78,6 @@
                     </svg>                      
                   </div>
               </div>
-              <th class="fourth-th"></th>
             </th>
             <th class="fifth-th">
               <div class="title-arrows-container">
@@ -96,10 +95,30 @@
           <th class="sixth-th">
               <span>User</span>
         </th>
-        <th class="seventh-th"></th>
               </tr>
             </thead>
-          </table>
+            <tbody>
+                <% for (let project of projs) { %>
+                <tr>
+                  <td>
+                    <div class="<%= project.color  %> dot">
+
+                    </div>
+                    <%= project.name %></td>
+                  <td></td>
+                  <% if (project.time === undefined) { %>
+                  <td>0 h</td>
+                  <% } else { %>
+                    <td><%= project.time %>h</td>
+                    <% } %>
+                  <td></td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+            <% } else { %>
+              <h1>You haven't created any projects yet!</h1>
+              <% } %>
         </div>
       </div>
   </div>
