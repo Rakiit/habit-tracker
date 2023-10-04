@@ -24,13 +24,13 @@
                 <form class="create-new-project-form" method="post" action="/projects">
                   <div class="color-input-container">
                     <div class="modal">
-                      <div class="circle" id="colorCircle" value></div>
+                      <div class="circle" id="colorCircle"></div>
                       <div class="colorPicker" id="colorPicker">
-                        <div class="color" style="background-color: red;" onclick="changeColor('red')" data-color="red"></div>
-                        <div class="color" style="background-color: blue;" onclick="changeColor('blue')" data-color="blue"></div>
-                        <div class="color" style="background-color: green;" onclick="changeColor('green')" data-color="green"></div>
-                        <div class="color" style="background-color: rgb(11, 131, 217);" onclick="changeColor('rgb(11, 131, 217)')" data-color="rgb(11, 131, 217)"></div>
-                        <div class="color" style="background-color: rgb(147, 162, 2);" onclick="changeColor('rgb(147, 162, 2)')" data-color="rgb(147, 162, 2)"></div>
+                        <div class="color red"  onclick="changeColor('red')" ></div>
+                        <div class="color blue"  onclick="changeColor('blue')" ></div>
+                        <div class="color green"  onclick="changeColor('green')" ></div>
+                        <div class="color light-blue" onclick="changeColor('light-blue')" ></div>
+                        <div class="color noxius" onclick="changeColor('noxius')" ></div>
                       </div>
                     </div>
                     <div class="project-input-container">
@@ -38,6 +38,7 @@
                       <span id="errorMessage" class="input-message-hidden">Please enter a Project name</span>
                     </div>
                   </div>
+                  <input type="hidden" id="selectedColorInput" name="selectedColor" value="#ffffff">
                   <div class="create-project-btn-container">
                     <button type="submit" class="btn create-project-btn">Create project</button>
                   </div>
@@ -100,11 +101,10 @@
             <tbody>
                 <% for (let project of projs) { %>
                 <tr>
-                  <td>
-                    <div class="<%= project.color  %> dot">
-
-                    </div>
-                    <%= project.name %></td>
+                  <td class="first-td">
+                    <div class="dot <%= project.selectedColor %>"></div>
+                    <span class="project-name <%= project.selectedColor %>"><%= project.name %></span>
+                  </td>
                   <td></td>
                   <% if (project.time === undefined) { %>
                   <td>0 h</td>

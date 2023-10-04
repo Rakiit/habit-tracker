@@ -45,12 +45,6 @@ function closeModalOutside(e) {
   }
 }
 
-// window.onclick = function (e) {
-//   if (e.target == modal) {
-//     modal.style.display = "none";
-//   }
-// };
-
 // Colored dots modal window
 const colorCircle = document.getElementById("colorCircle");
 const colorPicker = document.getElementById("colorPicker");
@@ -73,15 +67,38 @@ function closeColorPicker() {
   }
 }
 
-function changeColor(newColor) {
-  document.getElementById("colorCircle").style.backgroundColor = newColor;
-  closeColorPicker();
-}
-
 // Función para validar la entrada
 function validateInput() {
   // Ocultar el mensaje de error si hay texto en la input
   if (input.value.trim() !== "") {
     errorMessage.classList.add("input-message-hidden");
   }
+}
+
+const availableColors = ["red", "blue", "green", "light-blue", "noxius"];
+
+function getRandomColor() {
+  const randomIndex = Math.floor(Math.random() * availableColors.length);
+  return availableColors[randomIndex];
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const randomColor = getRandomColor();
+  colorCircle.classList.add(randomColor);
+  document.getElementById("selectedColorInput").value = randomColor;
+});
+
+function changeColor(newColor) {
+  availableColors.forEach((color) => {
+    colorCircle.classList.remove(color);
+  });
+  if (newColor) {
+    colorCircle.classList.add(newColor);
+    document.getElementById("selectedColorInput").value = newColor;
+  } else {
+    const randomColor = getRandomColor();
+    colorCircle.classList.add(randomColor);
+    document.getElementById("selectedColorInput").value = randomColor;
+  }
+  closeColorPicker();
 }

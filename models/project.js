@@ -19,9 +19,9 @@ const getProjectsFromFile = (cb) => {
 };
 
 module.exports = class Project {
-  constructor(name, color) {
+  constructor(name, selectedColor) {
     this.name = name;
-    this.color = color;
+    this.selectedColor = selectedColor;
   }
 
   save() {

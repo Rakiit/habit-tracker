@@ -40,8 +40,8 @@ exports.getProjects = (req, res, next) => {
 
 exports.postAddProject = (req, res, next) => {
   const name = req.body.name;
-  const color = req.body.color;
-  const project = new Project(name, color);
+  const selectedColor = req.body.selectedColor;
+  const project = new Project(name, selectedColor);
   project.save();
   res.redirect("/projects");
 };
