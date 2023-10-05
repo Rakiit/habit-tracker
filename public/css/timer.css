@@ -1,3 +1,9 @@
+:root {
+  --Box-shadow-search-input-timer-container: #827089;
+  --Background-search-input-timer-contaier: #ffffff;
+  --Input-color: #2c1338;
+}
+
 .top-left-section {
   display: flex;
   align-items: center;
@@ -81,4 +87,60 @@
 .anchor-login:hover,
 .anchor-login .login-icon:hover {
   color: var(--purple-color);
+}
+
+.select-project-modal {
+  display: none;
+  justify-content: center;
+  margin: 4rem 16rem 0rem 0rem;
+}
+
+.select-project-modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  width: 40rem;
+  height: 20rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 1.6rem rgba(0, 0, 0, 0.24);
+}
+
+.modal-visible {
+  display: flex;
+  position: absolute;
+}
+
+.search-icon-on-timer-input-container {
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  height: 3rem;
+  box-shadow: inset 0rem 0rem 0rem 0.1rem
+    var(--Box-shadow-search-input-timer-container);
+  border-radius: 0.8rem;
+  background-color: var(--Background-search-input-timer-contaier);
+  width: 100%;
+}
+
+.search-icon-on-timer {
+  flex: 0 0 auto;
+  margin: 0rem 0.8rem;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.input-projects-on-timer {
+  flex: 1 1 auto;
+  height: 100%;
+  background-color: transparent !important;
+  font-family: inherit;
+  font-weight: 600;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none;
+  display: inline-block !important;
+  padding: 0px !important;
+  width: 70% !important;
+  color: var(--Input-color);
 }

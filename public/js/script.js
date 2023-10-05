@@ -46,3 +46,27 @@ function updateTime() {
     return ("0" + unit).length > 2 ? unit : "0" + unit;
   }
 }
+
+// projects selection modal window
+const openMyModalToLoadProjectsTimer =
+  document.getElementById("openModalOnTimer");
+const myModalProjectTimer = document.getElementById("myModalProjectTimer");
+const inputProjectTimer = document.getElementById("inputOnTimer");
+
+openMyModalToLoadProjectsTimer.addEventListener(
+  "click",
+  openModalToLoadProjects
+);
+document.addEventListener("click", closeModalToLoadProjects);
+
+function openModalToLoadProjects(e) {
+  e.stopPropagation();
+  myModalProjectTimer.classList.add("modal-visible");
+  inputProjectTimer.focus();
+}
+
+function closeModalToLoadProjects(e) {
+  if (!myModalProjectTimer.contains(e.target)) {
+    myModalProjectTimer.classList.remove("modal-visible");
+  }
+}

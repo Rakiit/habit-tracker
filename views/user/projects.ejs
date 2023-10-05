@@ -105,13 +105,13 @@
                     <div class="dot <%= project.selectedColor %>"></div>
                     <span class="project-name <%= project.selectedColor %>"><%= project.name %></span>
                   </td>
-                  <td></td>
+                  <td class="second-td"></td>
                   <% if (project.time === undefined) { %>
-                  <td>0 h</td>
+                  <td class="third-td">0 h</td>
                   <% } else { %>
                     <td><%= project.time %>h</td>
                     <% } %>
-                  <td></td>
+                  <td class="fourth-td"></td>
                 </tr>
                 <% } %>
               </tbody>
