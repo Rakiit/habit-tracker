@@ -11,7 +11,7 @@
   --Th-Color: #73607b;
   --Box-shadow-th-color: #ebe7eb;
   --Blue-color: blue;
-  --Gren-color: green;
+  --Green-color: green;
 }
 
 .top-left-container {
@@ -294,18 +294,22 @@ th {
 
 .blue {
   background-color: var(--Blue-color);
+  color: var(--Blue-color);
 }
 
 .green {
-  background-color: var(--Gren-color);
+  background-color: var(--Green-color);
+  color: var(--Green-color);
 }
 
 .light-blue {
   background-color: var(--Light-blue-color);
+  color: var(--Light-blue-color);
 }
 
 .noxius {
   background-color: var(--Noxious-color);
+  color: var(--Noxius-color);
 }
 
 .project-name {

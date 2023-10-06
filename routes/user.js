@@ -3,9 +3,11 @@ const express = require("express");
 const userController = require("../controllers/user");
 const router = express.Router();
 
-router.get("/timer", userController.getAddActivity);
-
 router.get("/", userController.getIndex);
+
+router.get("/timer", userController.getAddDescription);
+
+// router.get("/timer", userController.getProjects);
 
 router.get("/reports", userController.getAddReport);
 

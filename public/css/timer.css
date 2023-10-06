@@ -2,6 +2,15 @@
   --Box-shadow-search-input-timer-container: #827089;
   --Background-search-input-timer-contaier: #ffffff;
   --Input-color: #2c1338;
+  --No-projects-color: #73607b;
+  --No-projects-background-color: #f0f1f2;
+  --No-projects-dot-background-color: rgb(213, 208, 215);
+  --Red-color: red;
+  --Blue-color: blue;
+  --Green-color: green;
+  --Light-blue-color: rgb(11, 131, 217);
+  --Noxious-color: rgb(147, 162, 2);
+  --purple-color: #857beb;
 }
 
 .top-left-section {
@@ -143,4 +152,104 @@
   padding: 0px !important;
   width: 70% !important;
   color: var(--Input-color);
+}
+
+.projects-container {
+  margin-top: 2rem;
+  box-sizing: border-box;
+  direction: ltr;
+  height: 13rem;
+  position: relative;
+  width: 38rem;
+  will-change: transform;
+  overflow: auto;
+  padding-bottom: 0.5rem;
+}
+
+.projects-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background-color: var(--purple-color);
+}
+
+.no-project-container {
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0rem 1rem;
+  border-radius: 0.8rem;
+  cursor: auto;
+  width: 96%;
+  color: var(--No-projects-color);
+  background-color: var(--No-projects-background-color);
+  display: grid;
+  grid-template-columns: 1.5rem fit-content(100%) 1fr;
+  margin-top: 1rem;
+  align-items: center;
+  flex: 1 1 0%;
+}
+
+.no-project-circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+  background-color: var(--No-projects-dot-background-color);
+}
+
+.project-container {
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0rem 1rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  width: 96%;
+  display: grid;
+  grid-template-columns: 1.5rem fit-content(100%) 1fr;
+  margin-top: 1rem;
+  align-items: center;
+  flex: 1 1 0%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.project-container:hover {
+  background-color: var(--No-projects-background-color);
+  cursor: pointer;
+}
+
+.project-circle {
+  width: 7px;
+  height: 7px;
+  border-radius: 100%;
+}
+
+.red {
+  background-color: var(--Red-color);
+  color: var(--Red-color);
+}
+
+.blue {
+  background-color: var(--Blue-color);
+  color: var(--Blue-color);
+}
+
+.green {
+  background-color: var(--Green-color);
+  color: var(--Green-color);
+}
+
+.light-blue {
+  background-color: var(--Light-blue-color);
+  color: var(--Light-blue-color);
+}
+
+.noxius {
+  background-color: var(--Noxious-color);
+  color: var(--Noxious-color);
+}
+
+.project-name {
+  background: none;
 }

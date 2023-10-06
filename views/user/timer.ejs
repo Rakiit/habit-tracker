@@ -22,7 +22,24 @@
                     <svg class="search-icon-on-timer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                     </svg>
-                  <input class="input-projects-on-timer" id="inputOnTimer" type="text" placeholder="Search by project" tabindex="0"/>
+                  <input class="input-projects-on-timer" id="inputOnTimer" type="text" placeholder="Search by project" tabindex="0" oninput="filterProjects()"/>
+                  </div>
+                  <div class="projects-container">
+                    <div class="no-project-container">
+                      <div class="no-project-circle">
+                      </div>
+                      <span>No project</span>
+                    </div>
+                    <% if (projs.length > 0) { %>
+                      <% for (let project of projs) { %>
+                          <div id="projectList" class="project-container">
+                            <div class="project-circle <%= project.selectedColor %>"></div>
+                            <span class="project-name <%= project.selectedColor %>"><%= project.name %></span>
+                          </div>
+                          <% } %>
+                          <% } else { %>
+                            <h3>You haven't created any projects yet!</h3>
+                          <% } %>
                   </div>
                 </div>
               </div>

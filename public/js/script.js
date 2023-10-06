@@ -70,3 +70,16 @@ function closeModalToLoadProjects(e) {
     myModalProjectTimer.classList.remove("modal-visible");
   }
 }
+
+// Filter projects on every key press
+function filterProjects() {
+  const filterValue = document
+    .getElementById("inputOnTimer")
+    .value.toLowerCase();
+  const listItems = document.querySelectorAll("#projectList");
+
+  listItems.forEach(function (item) {
+    const projectName = item.textContent.toLowerCase();
+    item.style.display = projectName.includes(filterValue) ? "" : "none";
+  });
+}

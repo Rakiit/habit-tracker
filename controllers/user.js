@@ -4,12 +4,28 @@ exports.getIndex = (req, res, next) => {
   res.redirect("/timer");
 };
 
-exports.getAddActivity = (req, res, next) => {
-  res.render("user/timer", {
-    pageTitle: "Start tracking",
-    path: "/timer",
+exports.getAddDescription = (req, res, next) => {
+  // res.render("user/timer", {
+  //   pageTitle: "Start tracking",
+  //   path: "/timer",
+  // });
+  Project.fetchAll((projects) => {
+    res.render("user/timer", {
+      projs: projects,
+      pageTitle: "Start tracking",
+      path: "/timer",
+    });
   });
 };
+
+// exports.getProjects = (req, res, next) => {
+//   Project.fetchAll((projects) => {
+//     res.render("user/timer", {
+//       projs: projects,
+//       path: "/timer",
+//     });
+//   });
+// };
 
 exports.getAddReport = (req, res, next) => {
   res.render("user/reports", {
