@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "nodemon app.js",
-    "build": "parcel build index.html",
-    "dev-frontend": "parcel index.html"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +16,7 @@
   },
   "homepage": "https://github.com/ricardoiarced/habit-tracker#readme",
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "parcel": "^2.9.3"
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
