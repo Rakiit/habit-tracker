@@ -7,7 +7,7 @@
 
 Welcome to **Your Habit Tracker**, a powerful tool to help you build positive habits and track your progress. Whether you're looking to boost productivity, improve health routines, or develop new skills, this habit tracker has you covered.
 
-![Habit Tracker Demo](link-to-demo-gif-or-screenshot)
+![Habit Tracker Demo](image.png)
 
 ## Features
 
