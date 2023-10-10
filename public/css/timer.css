@@ -3,7 +3,7 @@
   --Background-search-input-timer-contaier: #ffffff;
   --Input-color: #2c1338;
   --No-projects-color: #73607b;
-  --No-projects-background-color: #f0f1f2;
+  --Projects-background-color: #f0f1f2;
   --No-projects-dot-background-color: rgb(213, 208, 215);
   --Red-color: red;
   --Blue-color: blue;
@@ -35,7 +35,7 @@
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   grid-gap: 1rem;
-  width: min(55%, 50rem);
+  width: 100%;
   margin-inline: auto;
 }
 
@@ -45,18 +45,28 @@
 }
 
 .top-right-section .open-modal-projects {
-  width: 2.6rem;
+  width: auto;
   height: 2.6rem;
   border: none;
-  background: none;
   cursor: pointer;
   text-decoration: none;
+}
+
+.project-folder {
+  height: 2.6rem;
+  line-height: 2.6rem;
+  padding: 0rem 1rem;
+  border-radius: 0.8rem;
+  display: grid;
+  grid-template-columns: 1.5rem fit-content(100%) 1fr;
+  align-items: center;
 }
 
 .top-right-section .project-list-icon:hover,
 .top-right-section .open-modal-projects:hover {
   color: var(--purple-color);
 }
+
 .timer {
   font-size: larger;
   color: var(--argent-color);
@@ -182,12 +192,16 @@
   cursor: auto;
   width: 96%;
   color: var(--No-projects-color);
-  background-color: var(--No-projects-background-color);
+  background-color: var(--Projects-background-color);
   display: grid;
   grid-template-columns: 1.5rem fit-content(100%) 1fr;
   margin-top: 1rem;
   align-items: center;
   flex: 1 1 0%;
+}
+
+.no-project-container:hover {
+  cursor: pointer;
 }
 
 .no-project-circle {
@@ -215,7 +229,7 @@
 }
 
 .project-container:hover {
-  background-color: var(--No-projects-background-color);
+  background-color: var(--Projects-background-color);
   cursor: pointer;
 }
 

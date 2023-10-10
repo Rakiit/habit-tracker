@@ -18,6 +18,8 @@ exports.getAddDescription = (req, res, next) => {
   });
 };
 
+exports.postAddTimer = (req, res, next) => {};
+
 // exports.getProjects = (req, res, next) => {
 //   Project.fetchAll((projects) => {
 //     res.render("user/timer", {
